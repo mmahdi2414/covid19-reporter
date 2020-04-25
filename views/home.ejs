@@ -1,26 +1,40 @@
+<!doctype html>
 <html>
     <head>
         <title>Covid-19 Reporter</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
+    <style>
+        <%- myCss.style %>
+    </style>
     <body>
-        <table>
-            <tr>
-               <th>Name</th>
-               <th>Population</th>
-               <th>Confirmed Cases</th>
-               <th>Deaths</th>
-               <th>Recovered</th>
-            </tr>
-         
-            <% for (var i = 0; i < data.length; /* I save the data in a variable 'quotation', I don't know how you named your variable  */  i++) { %>
-             <tr>
-               <td><%= data[i].country %></td>
-               <td><%= data[i].country_population %></td>
-               <td><%= data[i].latest.confirmed %></td>
-               <td><%= data[i].latest.deaths %></td>
-               <td><%= data[i].latest.recovered %></td>
-             </tr>    
-            <% } %>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Population</th>
+                    <th scope="col">Confirmed Cases</th>
+                    <th scope="col">Deaths</th>
+                    <th scope="col">Recovered</th>     
+                </tr>
+            </thead>
+            <tbody>
+                <% for (var i = 0; i < data.length; /* I save the data in a variable 'quotation', I don't know how you named your variable  */  i++) { %>
+                <tr>
+                <th scope="row"><%= i + 1 %></th>
+                <td><%= data[i].country %></td>
+                <td><%= data[i].country_population %></td>
+                <td><%= data[i].latest.confirmed %></td>
+                <td><%= data[i].latest.deaths %></td>
+                <td><%= data[i].latest.recovered %></td>
+                </tr>    
+                <% } %>
+            </tbody>
          </table>
     </body>
 </html>

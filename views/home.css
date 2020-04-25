@@ -1,0 +1,15 @@
+.table-striped{
+    color: white;
+}
+.table-striped>thead{
+    background-color: rgb(0, 0, 0);
+}
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: rgb(1, 99, 99);
+ }
+ 
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color: rgb(2, 61, 61);
+ } 
