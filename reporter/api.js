@@ -28,7 +28,7 @@ router.get('/', function(req, res) {
 
     axios.get('http://covid19api.xapix.io/v2/locations')
     .then(function (response){
-        return res.status(200).send(response.data);
+        return res.render('home' , {data: response.data.locations})
     })
     .catch(function(error){
         log('error' , error);

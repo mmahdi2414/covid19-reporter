@@ -7,7 +7,7 @@ const reporter = require('./reporter/api');
 
 const port = process.env.PORT || 3000;
 const app = express();
-
+app.set('view engine' , 'ejs');
 app.use(body_parser.json());
 app.use(express.json());
 
