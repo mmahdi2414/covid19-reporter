@@ -3,7 +3,6 @@ const log = require('../logger/logger');
 const router = express.Router();
 const axios = require('axios');
 const {validationResult} = require('express-validator');
-var fs = require('fs');
 const errorFormatter = ({ location, msg, param}) => {
     return ` ${param} -> ${msg} `;
   };
@@ -29,7 +28,7 @@ router.get('/', function(req, res) {
     axios.get('http://covid19api.xapix.io/v2/locations')
     
     .then(function (response){
-        return res.render('home' , {data: response.data.locations , myCss: {style: fs.readFileSync('views/home.css','utf8')}});
+        return res.render('home' , {data: response.data.locations});
     })
     .catch(function(error){
         log('error' , error);

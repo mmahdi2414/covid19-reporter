@@ -24,7 +24,10 @@
     "ejs": "^3.1.2",
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
-    "fs": "0.0.1-security",
+    "path": "^0.12.7",
     "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }

@@ -7,10 +7,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/home.css"/>
     </head>
-    <style>
-        <%- myCss.style %>
-    </style>
     <body>
         <table class="table table-striped">
             <thead>
@@ -27,7 +25,7 @@
                 <% for (var i = 0; i < data.length; /* I save the data in a variable 'quotation', I don't know how you named your variable  */  i++) { %>
                 <tr>
                 <th scope="row"><%= i + 1 %></th>
-                <td><%= data[i].country %></td>
+                <td><%= data[i].country + "  " + data[i].province %></td>
                 <td><%= data[i].country_population %></td>
                 <td><%= data[i].latest.confirmed %></td>
                 <td><%= data[i].latest.deaths %></td>
