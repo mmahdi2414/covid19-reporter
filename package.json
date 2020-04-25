@@ -1,0 +1,19 @@
+{
+  "name": "covid19-reporter",
+  "version": "1.0.0",
+  "description": "HW4 of internet engineering",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmahdi2414/covid19-reporter.git"
+  },
+  "author": "m.mahdi2414",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmahdi2414/covid19-reporter/issues"
+  },
+  "homepage": "https://github.com/mmahdi2414/covid19-reporter#readme"
+}
