@@ -25,7 +25,7 @@
                 <% for (var i = 0; i < data.length; /* I save the data in a variable 'quotation', I don't know how you named your variable  */  i++) { %>
                 <tr>
                 <th scope="row"><%= i + 1 %></th>
-                <td><%= data[i].country + "  " + data[i].province %></td>
+                <td><%= data[i].country + (data[i].province=='' ? '' : ', ' + data[i].province) %></td>
                 <td><%= data[i].country_population %></td>
                 <td><%= data[i].latest.confirmed %></td>
                 <td><%= data[i].latest.deaths %></td>
